@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<UseWindowsForms>true</UseWindowsForms>
+		<Nullable>disable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<LangVersion>latest</LangVersion>
+		<ApplicationIcon>app.ico</ApplicationIcon>
+		<RootNamespace>ShortcutOrganizer</RootNamespace>
+		<AssemblyName>ShortcutOrganizer</AssemblyName>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="app.ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="VirtualizingWrapPanel" Version="2.1.1" />
+		<PackageReference Include="Microsoft.VisualBasic" Version="10.3.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Using Remove="System.Windows.Forms" />
+		<Using Remove="System.Drawing" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Resource Include="app.ico">
+	    <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	  </Resource>
+	</ItemGroup>
+</Project>

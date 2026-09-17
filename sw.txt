@@ -1,0 +1,14 @@
+初始化 Git：
+
+bash
+git init
+git add .
+git commit -m "初始版本"
+git remote add origin https://github.com/q14217/ShortcutOrganizer.git
+git push -u origin main
+每次改完代码：
+
+bash
+git add .
+git commit -m "描述改动"
+git push

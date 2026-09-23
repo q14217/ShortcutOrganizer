@@ -179,6 +179,7 @@ namespace ShortcutOrganizer
                     }
                 }
             }
+            UpdateCategoryCounts();
         }
 
         private bool TryRestoreFromLatestBackup(out string usedBackup)

@@ -213,6 +213,9 @@ namespace ShortcutOrganizer
                 _categories.Insert(1, _recentCategory);
             }
 
+            // ⭐ 新增：刷新计数，让"常用"和"最近"也有正确的数字 ⭐
+            UpdateCategoryCounts();
+
             var firstReal = _categories.FirstOrDefault(c =>
                 c != _favoritesCategory && c != _recentCategory);
             if (firstReal != null)
